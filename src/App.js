@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Dashboard from './Components/Dashboard';
+import ViewCustomers from './Components/CustomerManagement/ViewCustomers';
+import ViewProducts from './Components/InventoryManagement/ViewProducts';
+import BillingWindow from './Components/Billing/BillingWindow';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/customers" element={<ViewCustomers />} />
+                <Route path="/products" element={<ViewProducts />} />
+                <Route path="/billing" element={<BillingWindow />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

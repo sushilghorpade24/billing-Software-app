@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: #f8f9fa; /* Light grey background */
+  /* Or use a background image */
+  /* background-image: url('path/to/your/image.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+}
+.bg-gradient-success {
+  background: linear-gradient(45deg, #28a745, #218838);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #007bff, #0069d9);
+}
+
+.bg-gradient-info {
+  background: linear-gradient(45deg, #17a2b8, #138496);
+}
